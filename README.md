@@ -16,7 +16,7 @@ A structured, 90-day day-by-day roadmap designed to master Data Structures and A
 * **Slot 2 (1.0 Hour):** Close the video, open the IDE, and write the code from scratch. Debug your own errors.
 * **Slot 3 (1.5 Hours):** Dry-run the logic on paper and solve 1-2 related practice problems on LeetCode/CodeHelp.
 
----
+--- 
 
 ## 🗺️ The 12-Week Master Plan
 
