@@ -34,10 +34,33 @@ int main(){
         b = nextNumber;
     }
 
+// Check prime No
 
 
+     int n ;
+    cout << "Enter your value " << endl;
+    cin >>n;
+
+    bool isPrime = 1;
 
     
+
+    for (int i = 2 ; i < n; i ++){
+
+        // reminder = 0, Not a prime number
+        if (n%i == 0){
+            isPrime = 0;
+            break;
+        }
+
+        if (isPrime == 0){
+            cout << "Not a prime Number " << endl;
+        }
+        else{
+            cout << "is a prime number " << endl;
+        }
+
+    }
 
     return 0;
 }
