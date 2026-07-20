@@ -16,22 +16,22 @@ int main(){
     cin >> op;
 
     switch ( op ){
-        case '+' : cout <<"Yout answer is : "<<  (a + b) << endl;
+        case '+' : cout <<"Your answer is : "<<  (a + b) << endl;
         break;
 
-        case '-': cout <<"Yout answer is : "<< (a - b) << endl;
+        case '-': cout <<"Your answer is : "<< (a - b) << endl;
         break;
 
-        case '*': cout <<"Yout answer is : "<< (a * b) << endl;
+        case '*': cout <<"Your answer is : "<< (a * b) << endl;
         break;
 
-        case '/': cout <<"Yout answer is : "<< (a / b) << endl;
+        case '/': cout <<"Your answer is : "<< (a / b) << endl;
         break;
 
-        case '%': cout <<"Yout answer is : "<< (a % b) << endl;
+        case '%': cout <<"Your answer is : "<< (a % b) << endl;
         break;
 
-        default: cout <<"Yout answer is : "<< "invalid plzz correct it & try agian!" << endl;
+        default: cout << "invalid plzz correct it & try agian!" << endl;
         break;
 
     }
