@@ -28,3 +28,45 @@ int main(){
 
     return 0;
 }
+
+
+
+
+
+
+#include<iostream>
+using namespace std;
+
+// Function returns:
+// 1 (true)  --> Even
+// 0 (false) --> Odd
+
+bool isEven(int a){
+
+    // If last bit is 1, number is odd
+    if (a & 1){
+        return false;
+    }
+
+    // Otherwise number is even
+    else{
+        return true;
+    }
+}
+
+int main(){
+
+    int num;
+    cout << "Enter Number: ";
+    cin >> num;
+
+    // Calling function
+    if (isEven(num)){
+        cout << "Number is Even" << endl;
+    }
+    else{
+        cout << "Number is Odd" << endl;
+    }
+
+    return 0;
+}
