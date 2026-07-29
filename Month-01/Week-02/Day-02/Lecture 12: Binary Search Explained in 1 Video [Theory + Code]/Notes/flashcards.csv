@@ -1,0 +1,65 @@
+What is the time complexity of Linear Search in the worst case?,$O(n)$
+"In Linear Search, if an array has 1000 elements, what is the maximum number of comparisons required?",1000
+Binary Search can only be applied to a _____ function.,monotonic
+What is the most common example of a monotonic function in the context of Binary Search?,A sorted array (increasing or decreasing order).
+What is the first step in the Binary Search algorithm after defining the search range?,Find the middle element of the current range.
+"In Binary Search, if the target 'key' is equal to the middle element, what value is typically returned?",The index of the middle element.
+"If the target 'key' is greater than the middle element in an ascending sorted array, which part of the array is searched next?",The right part (elements after the middle element).
+"If the target 'key' is smaller than the middle element in an ascending sorted array, which part of the array is searched next?",The left part (elements before the middle element).
+What is the standard formula used to calculate the middle index ($mid$) using start ($s$) and end ($e$)?,$mid = \frac{s + e}{2}$
+Why might the formula $mid = \frac{s + e}{2}$ cause an error in programming for very large arrays?,The sum of $s$ and $e$ might exceed the maximum limit of an integer (integer overflow).
+What is the optimized formula for calculating the middle index ($mid$) to avoid integer overflow?,$s + \frac{e - s}{2}$
+"In the Binary Search loop, what is the condition required for the loop to continue executing?",$start \le end$
+"If the key is greater than the middle element, how is the 'start' index updated for the next iteration?",$start = mid + 1$
+"If the key is smaller than the middle element, how is the 'end' index updated for the next iteration?",$end = mid - 1$
+What is the time complexity of Binary Search?,$O(\log n)$
+Approximately how many comparisons would Binary Search take for an array of 1000 elements?,10
+"In the derivation of Binary Search complexity, if the array size $n$ is divided by 2 repeatedly $k$ times until it reaches 1, what is the value of $n$ in terms of $k$?",$n = 2^k$
+"In the equation $n = 2^k$, what is the value of $k$?",$\log_2 n$
+"If Binary Search finishes the loop without finding the key, what value does the function typically return to indicate failure?",$-1$
+"When searching for the number 12 in the sorted array $[2, 4, 6, 8, 12, 18]$, what is the initial 'mid' index if the array starts at 0?",2 (Value: 6)
+Concept: Monotonic function,Definition: A function that is either entirely non-increasing or entirely non-decreasing.
+True or False: Binary Search is always faster than Linear Search regardless of array size.,False (Linear search can be faster for very small arrays or if the element is at the very beginning).
+What happens to the search space in each iteration of Binary Search?,It is reduced by half.
+"If the 'start' index becomes greater than the 'end' index, what does this signify in Binary Search?",The element is not present in the array.
+"In the provided C++ implementation, which variable stores the size of the array passed to the search function?",$size$
+How do you calculate the initial 'end' index for an array of size $n$?,$n - 1$
+Why is it important to update the $mid$ value inside the while loop of a Binary Search implementation?,To recalculate the center point of the newly updated search range ($start$ or $end$).
+"In the comparison $10$ vs $1000$ for $n=1000$, which search algorithm corresponds to the value 10?",Binary Search
+What is the relationship between the number of elements $n$ and the number of steps $k$ in Binary Search?,"The number of elements is halved at each step, represented as $\frac{n}{2^k}$."
+"In a sorted array $[3, 5, 9, 13, 27]$, if the key is 13 and the current mid is 9, in which direction will 'start' move?",To the right ($start = mid + 1$).
+"In the expression $s + \frac{e - s}{2}$, what does $(e - s)$ represent?",The length or distance of the current search range.
+"Which searching algorithm is more efficient for large, sorted datasets?",Binary Search
+What is the Big O notation used to describe the efficiency of an algorithm's execution time?,Time Complexity
+"In the context of searching, what is the 'key'?",The specific value that the algorithm is looking for within the data structure.
+"If an array is $[2, 4, 6, 8, 10]$ and we search for 10, what is the final index returned?",4
+Which search algorithm checks elements one by one from the start to the end?,Linear Search
+Why is the time complexity of Binary Search considered logarithmic?,Because the input size is divided by a constant factor (2) at every step.
+"In Binary Search, if $start = 5$ and $end = 5$, will the loop run one more time?","Yes, because the condition is $start \le end$."
+What does the 'best case' time complexity for Binary Search represent?,$O(1)$ (when the middle element is the key on the first try).
+"If $n = 2^{10}$, what is the value of $\log_2 n$?",10
+"To use Binary Search on a list of names, how must the list be organized?",Alphabetically (sorted).
+"In the code, if `arr[mid] < key`, which boundary is modified?",The `start` boundary.
+"In the code, if `arr[mid] > key`, which boundary is modified?",The `end` boundary.
+"When calculating $mid$ as $s + (e - s) / 2$, if $s = 100$ and $e = 200$, what is the result?",150
+What is the primary advantage of Binary Search over Linear Search for a database with millions of records?,Significant reduction in the number of required comparisons (Logarithmic vs. Linear scaling).
+What is the maximum number of iterations for Binary Search on an array of size $2^n$?,$n + 1$ (roughly $n$).
+"In a decreasingly sorted array, how would the logic for updating $start$ and $end$ change?","The conditions would be reversed: if $key < mid$, move to the right; if $key > mid$, move to the left."
+Why is $mid$ calculated as $s + (e - s) / 2$ mathematically identical to $(s + e) / 2$?,$s + \frac{e}{2} - \frac{s}{2} = \frac{2s + e - s}{2} = \frac{s + e}{2}$
+"If an array is $[5, 11, 13, 17, 19, 21]$ and the key is 15, what will Binary Search return?",$-1$ (Element not found).
+The process of manually stepping through code with sample values to check for errors is called a _____.,Dry run
+"If $size = 7$, what are the initial values for $start$ and $end$?","$start = 0$, $end = 6$."
+"In the code `int mid = start + (end - start) / 2;`, what data type is $mid$?",`int` (Integer)
+Does Binary Search require extra memory space compared to Linear Search?,"No, both typically have a space complexity of $O(1)$ if implemented iteratively."
+"If $n = 1,000,000$, roughly how many comparisons does Binary Search need?","Approximately 20 ($2^{20} \approx 1,000,000$)."
+What is the result of $5 / 2$ in integer division used in programming languages like C++?,2
+True or False: Linear search can be used on unsorted arrays.,True
+What is the main topic of Lecture 12 by Babbar?,Binary Search Theory and Code.
+What is the purpose of the `return -1;` statement outside the `while` loop?,To signify that the loop finished and the key was not found in the array.
+"In the algorithm, if `key > arr[mid]`, why do we set `start = mid + 1` instead of `start = mid`?","Because we have already checked `arr[mid]` and know it is not the key, so we exclude it."
+What happens if you attempt Binary Search on an unsorted array?,The algorithm will likely return an incorrect result or fail to find an existing element.
+Is the function $f(x) = x^2$ for $x > 0$ a monotonic function?,"Yes, it is strictly increasing for $x > 0$."
+What is the core idea behind 'Divide and Conquer' in Binary Search?,Repeatedly dividing the problem size by half to reach the solution quickly.
+"In the code `while(start <= end)`, why is the `=` sign included?",To handle cases where the search range narrows down to a single element ($start$ and $end$ are equal).
+"If the array is $[10, 20, 30, 40, 50]$ and $key = 5$, what are the values of $start$ and $end$ after the first iteration?","$start = 0, end = 1$ (since $5 < 30$, we look at the left half $[10, 20]$)."
+"Which part of the array $[1, 3, 5, 7, 9, 11]$ is the second half if the mid is index 2 (value 5)?","$[7, 9, 11]$"
