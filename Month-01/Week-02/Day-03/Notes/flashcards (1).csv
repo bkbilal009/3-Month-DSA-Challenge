@@ -1,0 +1,55 @@
+"In a sorted array, what is the time complexity of finding both the first and last occurrence of an element using Binary Search?",$O(\log N)$
+"When solving for the first and last position of an element, what should be returned if the element is not found?",-1
+"To find the **first occurrence** of a key, if $arr[mid] == key$, what is the next step after storing the current index in a temporary variable?",Move the end pointer to $mid - 1$.
+"To find the **last occurrence** of a key, if $arr[mid] == key$, what is the next step after storing the current index in a temporary variable?",Move the start pointer to $mid + 1$.
+"In Binary Search, why is the formula $mid = s + \frac{e-s}{2}$ preferred over $mid = \frac{s+e}{2}$?",To prevent integer overflow errors.
+"If the first occurrence of an element is at index 2 and the last occurrence is at index 5, how many times does the element appear in the array?",4
+What formula calculates the total number of occurrences of an element using its first and last indices?,$(LastIndex - FirstIndex) + 1$
+An array that strictly increases to a maximum value and then strictly decreases is known as a _____.,Mountain Array
+What is the primary goal when solving the 'Peak Index in a Mountain Array' problem?,To find the index of the largest element in the array.
+"In a mountain array, if $arr[mid] < arr[mid+1]$, which part of the array contains the peak?",The right part (excluding $mid$).
+"In a mountain array peak search, if $arr[mid] < arr[mid+1]$, how should the `start` pointer be updated?",$start = mid + 1$
+"In a mountain array peak search, if $arr[mid] \ge arr[mid+1]$, why is the `end` pointer updated to $mid$ rather than $mid - 1$?",Because $mid$ could potentially be the peak element itself.
+What is the loop condition used in the peak element search to ensure the pointers converge correctly?,while ($start < end$)
+"Upon the termination of the peak element search loop ($start == end$), which variable contains the peak index?",Either $start$ or $end$.
+Concept: First Occurrence Logic,"If $arr[mid] == key$, update the answer and search the left side by setting $end = mid - 1$."
+Concept: Last Occurrence Logic,"If $arr[mid] == key$, update the answer and search the right side by setting $start = mid + 1$."
+"In a sorted array, Binary Search requires that the search space is _____.",Monotonic
+"When the target key is greater than $arr[mid]$ in a non-decreasing sorted array, how is the `start` pointer updated?",$start = mid + 1$
+"When the target key is less than $arr[mid]$ in a non-decreasing sorted array, how is the `end` pointer updated?",$end = mid - 1$
+What is the space complexity of the iterative Binary Search implementation used for these problems?,$O(1)$
+"In the mountain array problem, what does the condition $arr[mid] < arr[mid+1]$ indicate about the current position relative to the peak?",The current position is on the ascending slope.
+"In the mountain array problem, what does the condition $arr[mid] > arr[mid+1]$ indicate about the current position relative to the peak?",The current position is either the peak or on the descending slope.
+"In the context of the peak index problem, why is the `mid` calculation performed inside the `while` loop?",To recalculate the middle index based on updated `start` or `end` pointers.
+"If $arr = [0, 10, 5, 2]$, what is the peak element index?",1
+"If $arr = [1, 2, 3, 4, 5, 3, 1]$, at what index is the peak element located?",4
+"If $arr = [3, 3, 3, 3, 3]$ and the key is 3, what is the value of the first occurrence index?",0
+"If $arr = [3, 3, 3, 3, 3]$ and the key is 3, what is the value of the last occurrence index?",4
+"In a peak element search, if $start = 0$ and $end = 3$, and $mid = 1$ with $arr[1] < arr[2]$, what is the new value of $start$?",2
+"In a peak element search, if $start = 0$ and $end = 3$, and $mid = 1$ with $arr[1] > arr[2]$, what is the new value of $end$?",1
+"When finding the first occurrence, why is it necessary to store the index in a variable named `ans` instead of returning `mid` immediately?",Because a duplicate occurrence might exist at an even lower index.
+True or False: The peak element in a mountain array is the only element that is greater than both its immediate neighbors (if they exist).,True
+"In a sorted array search, if the key is not found, what will be the final value of the `ans` variable initialized to -1?",-1
+How is the total number of occurrences for key $k$ related to the search for first and last indices?,It is the difference between the last and first occurrence indices plus one.
+"In a mountain array, the left side of the peak is sorted in _____ order.",Strictly increasing
+"In a mountain array, the right side of the peak is sorted in _____ order.",Strictly decreasing
+What is the initial value of the `start` pointer when starting a Binary Search on an array of size $n$?,0
+What is the initial value of the `end` pointer when starting a Binary Search on an array of size $n$?,$n - 1$
+Formula: How do you calculate the `mid` index using `s` (start) and `e` (end) to avoid overflow?,$s + \frac{e-s}{2}$
+"If the key is 3 and the array is $[1, 2, 3, 3, 3, 5]$, what is the value of the 'first occurrence' index?",2
+"If the key is 3 and the array is $[1, 2, 3, 3, 3, 5]$, what is the value of the 'last occurrence' index?",4
+"In the function for finding the first occurrence, what occurs after the `while` loop finishes?",The value of `ans` is returned.
+"When searching for the peak in a mountain array, why is the condition `while (start <= end)` not used?",Because the `end = mid` logic would cause an infinite loop when `start == end`.
+What is the return type of a function designed to find the index of an element in an array?,Integer (int)
+"To find the total frequency of an element in a sorted array, how many separate Binary Search calls are typically used?","Two (one for first occurrence, one for last)."
+"If an element appears only once in a sorted array, what is the relationship between its first and last occurrence indices?",They are equal.
+"When finding the peak index, if $arr[mid] = 5$ and $arr[mid+1] = 8$, the search should continue to the _____.",Right
+"When finding the peak index, if $arr[mid] = 10$ and $arr[mid+1] = 7$, the search should continue to the _____.",Left (including $mid$)
+"In a peak element problem, the input array is guaranteed to have at least _____ elements to form a mountain.",3
+Binary Search is applicable to the peak element problem because the array has a _____ property.,Partially sorted or Monotonic-like
+How is the search space reduced in each step of Binary Search?,It is halved.
+What value does $mid$ take if $start = 0$ and $end = 5$ using the formula $s + \frac{e-s}{2}$?,2
+"In a peak index search, why does the loop terminate when $start$ equals $end$?",Because both pointers have converged on the maximum element.
+"To return both the first and last position indices from a single function call, what data structure is commonly used in C++?","pair<int, int>"
+"In the mountain array logic, if $arr[mid] < arr[mid+1]$, $mid$ is definitely not the _____.",Peak element
+"If a sorted array is $[1, 2, 4, 4, 5]$ and the key is 3, what is the result of the first occurrence search?",-1
