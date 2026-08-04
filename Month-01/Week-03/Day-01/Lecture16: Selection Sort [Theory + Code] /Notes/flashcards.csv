@@ -1,0 +1,53 @@
+What is the general definition of 'sorting' in programming?,"Sorting is the process of arranging elements in a specific order, such as increasing or decreasing order."
+How does Selection Sort organize elements in each round?,It selects the smallest element from the unsorted part of the array and places it in its correct position.
+"In an array of size $n$, how many rounds (or passes) are required to complete Selection Sort?",Selection Sort requires $n - 1$ rounds to sort the array.
+Why does Selection Sort only require $n - 1$ rounds for an array of size $n$?,"After $n - 1$ elements are placed in their correct positions, the last remaining element is automatically in its correct place."
+What is the role of the outer loop in the Selection Sort algorithm?,The outer loop tracks the current position that needs to be filled with the next smallest element.
+What is the index range of the outer loop in a Selection Sort implementation for an array of size $n$?,The outer loop typically runs from index $0$ to $n - 2$.
+What is the purpose of the inner loop in Selection Sort?,The inner loop traverses the unsorted portion of the array to find the index of the minimum element.
+At what index does the inner loop typically begin in each round $i$ of Selection Sort?,The inner loop begins at index $i + 1$.
+Which variable is commonly used in Selection Sort code to store the index of the smallest element found so far in a round?,The variable `minIndex` is used to store the index of the smallest element.
+"At the start of each outer loop iteration $i$, what value is `minIndex` initialized to?",`minIndex` is initialized to the current index $i$.
+What condition must be met to update the `minIndex` during the inner loop execution?,The value at the current inner loop index $j$ must be less than the value at the current `minIndex` ($arr[j] < arr[minIndex]$).
+What action is taken after the inner loop finishes finding the minimum element in a round?,The element at the current outer loop index $i$ is swapped with the element at `minIndex`.
+What is the Space Complexity of the Selection Sort algorithm?,The Space Complexity is $O(1)$ because it only uses a constant amount of extra space for variables.
+"What is the Time Complexity of Selection Sort in the best-case scenario (e.g., already sorted array)?",The best-case time complexity is $O(n^2)$.
+What is the Time Complexity of Selection Sort in the worst-case scenario?,The worst-case time complexity is $O(n^2)$.
+Why is the best-case time complexity of Selection Sort $O(n^2)$?,"The algorithm always performs the same number of comparisons to find the minimum element, regardless of the initial order of the array."
+In what specific scenario is Selection Sort a good choice for sorting?,It is useful when the array size is small or when memory usage needs to be minimized.
+How does Selection Sort perform in terms of stability?,Selection Sort is generally considered an unstable sorting algorithm.
+"During Round 1 of Selection Sort on the array $[64, 25, 12, 22, 11]$, which element is swapped with $64$?",The element $11$ is swapped with $64$.
+"During Round 2 of Selection Sort on the array $[11, 25, 12, 22, 64]$, which index is being processed by the outer loop?",Index $1$ (the position currently holding $25$) is being processed.
+Selection Sort works by _____ the minimum element and placing it in its correct position.,selecting
+The _____ case and the _____ case for Selection Sort both result in $O(n^2)$ time complexity.,best; worst
+Selection Sort: Is the memory usage dependent on the size of the input array?,"No, memory usage is constant at $O(1)$ regardless of input size."
+"In the array $[5, 4, 3, 2, 1]$, what is the state of the array after the first round of Selection Sort?","The array becomes $[1, 4, 3, 2, 5]$."
+How many comparisons are made in the first round of Selection Sort for an array of size $n$?,There are $n - 1$ comparisons made in the first round.
+What happens in Selection Sort if the minimum element found is already at index $i$?,"The element is technically swapped with itself, and its position remains unchanged."
+Concept: Pass/Round,Definition: A single iteration of the outer loop where one element is placed into its final sorted position.
+Why is Selection Sort often referred to as 'in-place'?,It sorts the array by modifying the original memory without requiring a duplicate array.
+What is the result of the expression for total comparisons in Selection Sort: $(n-1) + (n-2) + ... + 1$?,The total number of comparisons is $\frac{n(n-1)}{2}$.
+"In the C++ code for Selection Sort, why is the outer loop condition `i < n-1` used instead of `i < n`?","By the time the second-to-last element is in place, the last element is guaranteed to be sorted, making the final iteration unnecessary."
+What is the primary disadvantage of Selection Sort compared to algorithms like Quick Sort or Merge Sort?,Its $O(n^2)$ time complexity makes it inefficient for large datasets.
+"In an array $[11, 12, 22, 25, 64]$, what does Selection Sort do in Round 1?","It compares $11$ with all other elements, finds $11$ is already the minimum, and leaves it at index $0$."
+"If $n = 5$, what is the total number of rounds performed by Selection Sort?",Total rounds performed is $4$.
+The process of repeatedly finding the minimum element is characteristic of which algorithm?,Selection Sort.
+"In Selection Sort, after $k$ rounds, how many elements are guaranteed to be in their final sorted positions?",The first $k$ elements are guaranteed to be sorted.
+"In the dry run of $[9, 2, 1, 3, 7]$, what is the first swap performed?",$1$ is swapped with $9$.
+What does the outer loop index $i$ represent in Selection Sort?,It represents the current boundary between the sorted and unsorted parts of the array.
+True or False: Selection Sort is highly efficient for arrays with millions of elements.,"False, it is inefficient for large arrays due to its quadratic time complexity."
+Which sorting algorithm is described as 'the easiest sorting algorithm' in the source material?,Selection Sort.
+"If the input array is already sorted in descending order and we want it in ascending order, how many swaps will Selection Sort perform?",It will perform $n - 1$ swaps.
+"In Selection Sort, is the `swap()` function called inside the inner loop or the outer loop?","The `swap()` function is called inside the outer loop, after the inner loop has finished."
+"What is the value of `minIndex` after the first pass of $[7, 5, 2, 8]$?",The value of `minIndex` will be $2$ (the index of the value $2$).
+Does Selection Sort require more swaps than Bubble Sort on average?,"No, Selection Sort generally performs fewer swaps ($O(n)$) compared to Bubble Sort ($O(n^2)$)."
+What is the relationship between the number of elements $n$ and the time complexity $O(n^2)$?,"If $n$ doubles, the time taken by Selection Sort increases by approximately four times."
+How does the unsorted sub-array change in size after each round of Selection Sort?,The size of the unsorted sub-array decreases by exactly one element after each round.
+"In the C++ implementation, what header or built-in function is typically used to exchange values at two indices?",The `swap()` function is typically used.
+"If you have an array with all identical elements, what is the time complexity of Selection Sort?","$O(n^2)$, as all comparisons are still performed."
+"If an array is $[2, 3, 4, 5, 1]$, what is the final sorted array produced by Selection Sort?","$[1, 2, 3, 4, 5]$."
+Which sorting algorithm 'selects' a minimum and 'swaps' it to the correct place?,Selection Sort.
+How does the time complexity of Selection Sort compare to its space complexity?,Selection Sort has a high time complexity ($O(n^2)$) but a low space complexity ($O(1)$).
+"In the Selection Sort logic, what is the unsorted portion of the array in the $i$-th iteration?",The unsorted portion is the sub-array from index $i$ to $n - 1$.
+What is the main focus of a 'dry run' in algorithm learning?,A dry run involves manually tracing the algorithm's logic with an example to understand its step-by-step execution.
+"In Selection Sort, if the current element is $10$ and the remaining unsorted elements are $[15, 12, 8, 20]$, which element will be selected?",The element $8$ will be selected as the new minimum.
